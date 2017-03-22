@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="osmap" version="3" method="upgrade">
+  <name>OSMap - MapFactory Plugin</name>
+  <author>Boris Barnier</author>
+  <creationDate>22/03/2017</creationDate>
+  <copyright>Copyright (C) 2017 - 2017 Open Source Matters. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+  <authorEmail>b.barnier@gmail.com</authorEmail>
+  <authorUrl></authorUrl>
+  <version>1.2</version>
+  <description>Add OSMap support for categories and trips on MapFactory</description>
+  <files>
+      <filename plugin="com_mapfactory">com_mapfactory.php</filename>
+      <filename>index.html</filename>
+  </files>
+  <languages folder="language" client="administrator">
+    <language tag="en-GB" client="administrator">en-GB.plg_osmap_com_mapfactory.ini</language>
+  </languages>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="expand_categories" type="list" default="1" label="OSMAP_SETTING_EXPAND_CATEGORIES" description="OSMAP_SETTING_EXPAND_CATEGORIES_DESC">
+          <option value="0">OSMAP_OPTION_NEVER</option>
+          <option value="1">OSMAP_OPTION_ALWAYS</option>
+          <option value="2">OSMAP_OPTION_XML_ONLY</option>
+          <option value="3">OSMAP_OPTION_HTML_ONLY</option>
+        </field>
+        <field name="max_trips" type="text" default="0" label="OSMAP_SETTING_MAX_IMG_CAT" description="OSMAP_SETTING_MAX_IMG_CAT_DESC" />
+      </fieldset>
+      <fieldset name="xml">
+        <field name="cat_priority" type="list" default="-1" label="OSMAP_SETTING_CAT_PRIORITY" description="OSMAP_SETTING_CAT_PRIORITY_DESC">
+          <option value="-1">OSMAP_OPTION_USE_PARENT_MENU</option>
+          <option value="0.0">0.0</option>
+          <option value="0.1">0.1</option>
+          <option value="0.2">0.2</option>
+          <option value="0.3">0.3</option>
+          <option value="0.4">0.4</option>
+          <option value="0.5">0.5</option>
+          <option value="0.6">0.6</option>
+          <option value="0.7">0.7</option>
+          <option value="0.8">0.8</option>
+          <option value="0.9">0.9</option>
+          <option value="1">1</option>
+        </field>
+        <field name="trip_priority" type="list" default="-1" label="OSMAP_SETTING_TRIP_PRIORITY" description="OSMAP_SETTING_TRIP_PRIORITY_DESC">
+          <option value="-1">OSMAP_OPTION_USE_PARENT_MENU</option>
+          <option value="0.0">0.0</option>
+          <option value="0.1">0.1</option>
+          <option value="0.2">0.2</option>
+          <option value="0.3">0.3</option>
+          <option value="0.4">0.4</option>
+          <option value="0.5">0.5</option>
+          <option value="0.6">0.6</option>
+          <option value="0.7">0.7</option>
+          <option value="0.8">0.8</option>
+          <option value="0.9">0.9</option>
+          <option value="1">1</option>
+        </field>
+        <field name="trip_changefreq" type="list" default="-1" label="OSMAP_SETTING_TRIP_CHANCE_FREQ" description="OSMAP_SETTING_TRIP_CHANCE_FREQ_DESC">
+          <option value="-1">OSMAP_OPTION_USE_PARENT_MENU</option>
+          <option value="always">OSMAP_OPTION_ALWAYS</option>
+          <option value="hourly">OSMAP_OPTION_HOURLY</option>
+          <option value="daily">OSMAP_OPTION_DAILY</option>
+          <option value="weekly">OSMAP_OPTION_WEEKLY</option>
+          <option value="monthly">OSMAP_OPTION_MONTHLY</option>
+          <option value="yearly">OSMAP_OPTION_YEARLY</option>
+          <option value="never">OSMAP_OPTION_NEVER</option>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+</extension>
